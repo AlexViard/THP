@@ -1,6 +1,6 @@
 require 'pry'
 require_relative 'player'
-
+# MEME METHODE QUE POUR LE 2 
 class Game < HumanPlayer 
 	attr_accessor :human_player, :enemies 
 
@@ -31,12 +31,12 @@ class Game < HumanPlayer
 	def menu 
 	  @human_player.show_state
 	  puts
-  	  puts "Quelle action veux-tu effectuer ?"
+  	  puts "Quelle action veux-tu effectuer ?".yellow
   	  puts
   	  puts "a - chercher une meilleure arme"
   	  puts "s - chercher à se soigner"
   	  puts
-  	  puts "attaquer un joueur en vue :"
+  	  puts "attaquer un joueur en vue :".yellow
   	  puts
 	  i = 0 
 	    while i < @enemies.size 
@@ -87,9 +87,9 @@ class Game < HumanPlayer
 
 	def end 
   	  if human_player.life_point > 0
-    	    puts "BRAVO ! TU AS GAGNE"
+    	    puts "BRAVO ! TU AS GAGNE".green
   	  else
-    	    puts "Loser ! Tu as perdu !"
+    	    puts "Loser ! Tu as perdu !".red
   	  end   
 	end 
 end 
