@@ -5,10 +5,8 @@
   <body>
     <h1>Mon super site de gossip</h1>
     <p>Veut tu creer un <a href ="/gossips/new/">potin ?</p></a> 
-  </body>
-</html>
 
-<%i = 0 %>
+<%i = 0 %> <!-- On boucle sur le tableau de gossip et on les affiches tous-->
 <% while i < gossips.size %>
 	<p>
 	   <a href = "gossips/<%=i%>/"> Potin n <%= i %></a>
@@ -18,4 +16,6 @@
 	  <%= gossips[i].content %>
 	</p>
 	<% i = i + 1 %>
-<% end %> 
+    <% end %> 
+  </body>
+</html>

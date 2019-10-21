@@ -6,13 +6,13 @@ class Gossip
 	  @content = content
 	end 	
 	
-	def save 
+	def save #Sauvegarder les potin dans un CSV 
 	    CSV.open("./db/gossip.csv", "ab") do |csv|
 	    csv << [@author, " #{@content}"]
 	  end
 	end 
 	
-	def self.all
+	def self.all  
 	  @all_gossips = []
 	  CSV.read("./db/gossip.csv").each do |csv_line|
 	    @all_gossips << Gossip.new(csv_line[0], csv_line[1])
@@ -20,12 +20,8 @@ class Gossip
 	  return @all_gossips
 	end
 
-	def self.find(id)
+	def self.find(id) # permet de rechercher en fonction de l'id
 	  return Gossip.all[id]
 	end
 	
-	def update()
-	  
-
-	end   
 end 
