@@ -1,0 +1,1 @@
+Tout programmeur doit savoir créer un back-end robuste : même ceux qui finalement se spécialiseront en front-end devront parfaitement comprendre le fonctionnement d'une BDD pour faire des jolies views dynamiques. Et comme tu seras amené à concevoir et manipuler des centaines de bases de données dans ta vie de programmeur, autant commencer tout de suite 😃
